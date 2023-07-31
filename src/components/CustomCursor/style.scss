@@ -1,0 +1,84 @@
+/** @format */
+
+.large_circle,
+.small_circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  // background-color: transparent;
+  position: fixed;
+  pointer-events: none;
+  transition: transform 0.1s;
+}
+.small_circle {
+  width: 10px;
+  height: 10px;
+  background-color: #726456;
+  // animation: curserAnim 0.5s infinite alternate;
+}
+.curser {
+  animation: curserAnim 0.5s infinite alternate;
+  border: 1px solid #000000;
+  // box-sizing: border-box;
+}
+.curser::after {
+  content: "";
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  right: -21px;
+  top: -21px;
+  background: #ece7e1;
+  // box-sizing: content-box;
+  border-radius: 50%;
+  opacity: 0.2;
+  animation: curserAnim1 0.5s infinite alternate;
+}
+.expand {
+  animation: curserAnim3 0.5s forwards;
+  border: 1px solid red;
+}
+.expand-main {
+  // animation: curserAnim3 0.5s forwards;
+  background-color: red;
+  opacity: 0.5;
+}
+@keyframes curserAnim {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.7);
+  }
+}
+
+@keyframes curserAnim1 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.4);
+  }
+}
+
+@keyframes curserAnim3 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(3);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+.three-d {
+  text-shadow: 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191,
+    1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191,
+    1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191,
+    1px 10px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4),
+    1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2),
+    1px 30px 60px rgba(16, 16, 16, 0.4);
+}
