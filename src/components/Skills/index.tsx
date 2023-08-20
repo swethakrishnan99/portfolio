@@ -12,11 +12,11 @@ import jQuery from "../../Images/jquery.svg";
 import responsivedesign from "../../Images/responsive-design.svg";
 import git from "../../Images/git.svg";
 import MongoDB from "../../Images/mongodb.svg";
-import linux from "../../Images/linux.svg";
+// import linux from "../../Images/linux.svg";
 import sass from "../../Images/sass.svg";
 import nodejs from "../../Images/nodejs.svg";
-import FTP from "../../Images/ftp.svg";
-import database from "../../Images/database.svg";
+// import FTP from "../../Images/ftp.svg";
+// import database from "../../Images/database.svg";
 
 function Skills() {
   return (
