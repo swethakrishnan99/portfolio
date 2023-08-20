@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import address from "../../Images/address.svg";
 import phone from "../../Images/phone-call.svg";
 import email from "../../Images/email.svg";
 import logo from "../../logo.svg";
+import { sendMessage } from "../../firebase";
 import {
   FacebookOutlined,
   GithubOutlined,
@@ -13,7 +14,46 @@ import {
 
 function Contact() {
   const { register, handleSubmit } = useForm();
-  const [data, setData] = useState("");
+  const [data, setData] = useState<any>();
+  const [message, setMessage] = useState<string>("");
+  useEffect(() => {
+    if (data && data.name && data.email) {
+      let nameCheck = validateName(data.name);
+      console.log(nameCheck);
+      let emailCheck = validateEmail(data.email);
+      if (!nameCheck && !emailCheck) {
+        setMessage("Please enter a valid name and email address");
+      } else if (!nameCheck) {
+        setMessage("Please enter a valid name");
+        console.log(nameCheck);
+      } else if (!emailCheck) {
+        setMessage("Please enter a valid email address");
+      } else {
+        setMessage("");
+        sendMessage(
+          data?.name,
+          data?.email,
+          data?.message ? data.message : null,
+          data?.subject ? data.subject : null
+        );
+      }
+    }
+  }, [data]);
+
+  function validateName(name: string) {
+    if (/^[A-Za-z\s]*$/.test(name)) return true;
+    else return false;
+  }
+
+  function validateEmail(emailAdress: string) {
+    const emailRegex = new RegExp(
+      /^[A-Za-z0-9_!#$%&'*+\/=?`{|}~^.-]+@[A-Za-z0-9.-]+$/,
+      "gm"
+    );
+    if (emailRegex.test(emailAdress)) return true;
+    else return false;
+  }
+
   return (
     <div id="contact" className="relative w-full min-h-[500px] z-50">
       <h5 className="md:!text-left text-center sm:!py-12 py-7 md:!px-20 px-10 w-full mx-auto">
@@ -108,19 +148,23 @@ function Contact() {
           <div className="flex justify-end w-full">
             <form
               className="flex flex-col w-full gap-7 max-w-[500px]"
-              onSubmit={handleSubmit((data) => setData(JSON.stringify(data)))}
+              onSubmit={handleSubmit((data) => {
+                setData({ ...data });
+              })}
             >
               <input
                 {...register("name")}
                 placeholder="Your Name (required)"
                 type="text"
                 className="sm:!h-10 h-9 rounded-md px-2 bg-[#E5E3E3] text-black"
+                required
               />
               <input
                 {...register("email")}
                 placeholder="Your Email (required)"
                 type="email"
                 className="sm:!h-10 h-9 rounded-md px-2 bg-[#E5E3E3] text-black"
+                required
               />
               <input
                 {...register("subject")}
@@ -133,7 +177,7 @@ function Contact() {
                 placeholder="Message"
                 className="h-20 rounded-md px-2 bg-[#E5E3E3] text-black"
               />
-              <p>{data && data}</p>
+              <p className="text-red-500 text-sm">{message}</p>
               <input
                 type="submit"
                 value="Send"
