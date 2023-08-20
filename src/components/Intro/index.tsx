@@ -38,6 +38,7 @@ function IntroComponent() {
           <img
             className="xl:!max-w-[480px] lg:!max-w-[350px] md:!max-w-[250px] max-w-[200px]"
             src={Profile}
+            alt="profile"
           ></img>
         </div>
       </div>

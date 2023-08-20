@@ -74,6 +74,7 @@ function Contact() {
               href="https://github.com/swethakrishnan99"
               className="hover:!text-[#E5E3E3]"
               target="_blank"
+              rel="noreferrer"
             >
               <GithubOutlined />
             </a>
@@ -81,6 +82,7 @@ function Contact() {
               href="https://www.facebook.com/swetha.krishnan.9406"
               className="hover:!text-[#E5E3E3]"
               target="_blank"
+              rel="noreferrer"
             >
               <FacebookOutlined />
             </a>
@@ -88,6 +90,7 @@ function Contact() {
               href="https://instagram.com/_swetha.krishnan"
               className="hover:!text-[#E5E3E3]"
               target="_blank"
+              rel="noreferrer"
             >
               <InstagramOutlined />
             </a>
@@ -95,6 +98,7 @@ function Contact() {
               href="https://www.linkedin.com/in/swethakrishnan99/"
               className="hover:!text-[#E5E3E3]"
               target="_blank"
+              rel="noreferrer"
             >
               <LinkedinOutlined />
             </a>
@@ -129,7 +133,7 @@ function Contact() {
                 placeholder="Message"
                 className="h-20 rounded-md px-2 bg-[#E5E3E3] text-black"
               />
-              {/* <p>{data}</p> */}
+              <p>{data && data}</p>
               <input
                 type="submit"
                 value="Send"

@@ -37,6 +37,7 @@ function Projects() {
                     href="https://suitejar.com/"
                     target="_blank"
                     className="hover:text-[#E5E3E3] hover:underline"
+                    rel="noreferrer"
                   >
                     Suitejar
                   </a>
@@ -60,6 +61,7 @@ function Projects() {
               <img
                 src={suitejarimg}
                 className="sm:!h-[500px] h-[300px] w-full object-contain rounded-md"
+                alt="sutejar"
               />
             </div>
           </div>
@@ -71,6 +73,7 @@ function Projects() {
                     href="https://gallery.vision/"
                     className="hover:text-[#E5E3E3] hover:underline"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     Gallery Vision
                   </a>
@@ -90,6 +93,7 @@ function Projects() {
               <img
                 src={galaryvisonimg}
                 className="sm:!h-[500px] h-[300px] w-full object-contain rounded-md"
+                alt="galaryvision"
               />
             </div>
           </div>
@@ -101,6 +105,7 @@ function Projects() {
                     href="https://nintriva.com/"
                     className="hover:text-[#E5E3E3] hover:underline"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     Nintriva
                   </a>
@@ -116,6 +121,7 @@ function Projects() {
               <img
                 src={nintriaimg}
                 className="sm:!h-[500px] h-[300px] w-full object-contain object-bottom rounded-md"
+                alt="nintriva"
               />
             </div>
           </div>
@@ -127,6 +133,7 @@ function Projects() {
                     href="https://mixrank.com/"
                     className="hover:text-[#E5E3E3] hover:underline"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     MixRank
                   </a>
@@ -146,6 +153,7 @@ function Projects() {
               <img
                 src={mixrankimg}
                 className="sm:!h-[500px] h-[300px] w-full object-contain rounded-md"
+                alt="mixrank"
               />
             </div>
           </div>
