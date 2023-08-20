@@ -4,11 +4,12 @@ import logo from "../../logo.svg";
 function Navbar() {
   const [navOpen, setNavOpen] = useState<boolean>(false);
   return (
-    <div className="w-full lg:!h-20 overflow-hidden bg-[#fff] opacity-90 text-[#6f6f6f] flex sticky top-0 right-0 z-[5000]">
-      {/* <img src={logo} alt="" /> */}
-
+    <div className="w-full lg:!h-20 h-16 overflow-hidden bg-[#000000]/60 text-[#E5E3E3] flex sticky top-0 right-0 z-[5000]">
       {navOpen ? (
-        <div className="w-full fixed bg-white flex lg:!flex-row flex-col items-center justify-start lg:!justify-center pb-5">
+        <div className="w-full fixed flex lg:!flex-row flex-col items-center justify-start lg:!justify-center pb-5">
+          {/* <div>
+            <img src={logo} alt="" />
+          </div>
           <div className="flex h-20 justify-end items-center px-9 text-lg font-medium font-poppins w-full lg:!hidden">
             <button
               className="flex justify-center items-center"
@@ -50,34 +51,39 @@ function Navbar() {
                 </a>
               </li>
             </ol>
-          </div>
+          </div> */}
         </div>
       ) : (
-        <div className="w-full h-full flex lg:!flex-row flex-col items-center justify-start lg:!justify-center">
-          <div className="flex h-20 justify-end items-center px-9 text-lg font-medium font-poppins w-full lg:!hidden">
-            <button onClick={() => setNavOpen(true)}>
+        <div className="w-full h-full px-20 flex justify-between items-center font-roboto">
+          <div className="">
+            <img
+              src={logo}
+              alt=""
+              className="lg:!w-[60px] w-[50px] lg:!h-[60px] h-[50px]"
+            />
+          </div>
+          <div className="flex items-center xl:!min-w-[900px] lg:!min-w-[700px]">
+            <button onClick={() => setNavOpen(true)} className="lg:hidden flex">
               <MenuOutlined />
             </button>
-          </div>
-          <div className="lg:!flex justify-end items-end font-poppins font-normal md:!text-[18px] text-base px-10 w-full hidden ">
-            <ol className="flex lg:!flex-row flex-col justify-center items-center w-full lg:!gap-10 gap-5">
-              <li key={1} className="py-1">
-                <a href="#home">HOME</a>
+            <ol className="lg:!flex justify-evenly w-full hidden">
+              <li key={1} className="">
+                <a href="#home">Home</a>
               </li>
-              <li key={2} className="py-1">
-                <a href="#about">ABOUT</a>
+              <li key={2} className="">
+                <a href="#about">About</a>
               </li>
-              <li key={3} className="py-1">
-                <a href="#skills">SKILLS</a>
+              <li key={3} className="">
+                <a href="#skills">Skills</a>
               </li>
-              <li key={4} className="py-1">
-                <a href="#work">WORK</a>
+              <li key={4} className="">
+                <a href="#work">Work</a>
               </li>
-              <li key={5} className="py-1">
-                <a href="#resume">RESUME</a>
+              <li key={5} className="">
+                <a href="#resume">Resume</a>
               </li>
-              <li key={6} className="py-1">
-                <a href="#contact">CONTACT</a>
+              <li key={6} className="">
+                <a href="#contact">Contact</a>
               </li>
             </ol>
           </div>
@@ -88,3 +94,13 @@ function Navbar() {
 }
 
 export default Navbar;
+
+//  <div className="flex h-20 justify-end items-center px-9 text-lg font-medium font-poppins w-full lg:!hidden">
+//             <div className="bg-slate-500">
+//               <img src={logo} alt="" />
+//             </div>
+//             <button onClick={() => setNavOpen(true)}>
+//               <MenuOutlined />
+//             </button>
+//           </div>
+//           <div className="lg:!flex justify-end items-end font-poppins font-normal md:!text-[18px] text-base px-10 w-full hidden "></div>

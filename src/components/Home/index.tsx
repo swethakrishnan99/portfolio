@@ -11,39 +11,38 @@ import About from "../About";
 import Experience from "../Experience";
 import Contact from "../Contact";
 import Projects from "../Projects";
-import Background from "../../Images/bghome.jpg";
 import Skills from "../Skills";
+import Background from "../../Images/background.svg";
 
 function Home() {
   return (
-    <div className="relative">
-      {/* <div className="fixed hidden flex-col items-center bottom-5 gap-3 px-4 text-2xl text-[#DDD0C8] md:!flex">
-        <a href="" className="hover:!text-[#e14678]/50 cursor-none">
-          <GithubOutlined />
-        </a>
-        <a href="" className="hover:!text-[#e14678]/50 cursor-none">
-          <FacebookOutlined />
-        </a>
-        <a href="" className="hover:!text-[#e14678]/50 cursor-none">
-          <InstagramOutlined />
-        </a>
-        <a href="" className="hover:!text-[#e14678]/50 cursor-none">
-          <LinkedinOutlined />
-        </a>
-        <div className="h-[200px] border-[1px] border-[#DDD0C8] w-0"></div>
-      </div> */}
-      <div className="w-[200px] border-[1px] border-[#DDD0C8] h-0 fixed bottom-5 left-7 md:block hidden"></div>
-      <Navbar />
-      <IntroComponent />
-      <About />
-      <Skills />
-      <Experience />
-      <Projects />
-      <Contact />
-      <footer className="w-full flex items-center justify-center h-[80px] md:!text-base text-sm bg-white text-[#6f6f6f]">
-        <p>© 2023 Swetha Krishnan. All Rights Reserved.</p>
-      </footer>
-    </div>
+    <>
+      <div className="w-full min-h-screen z-10">
+        <div className="w-full h-full -z-10">
+          <img
+            src={Background}
+            className="w-full h-full object-cover object-top absolute top-0"
+            alt=""
+          />
+        </div>
+
+        <Navbar />
+
+        <div className="w-full max-w-[1550px] mx-auto z-50">
+          <IntroComponent />
+          <About />
+          <Skills />
+          <Projects />
+          <Experience />
+          <Contact />
+        </div>
+        <div className="relative bg-black/50">
+          <footer className="w-full flex items-center justify-center h-[80px] md:!text-base text-sm text-[#E5E3E3]/80">
+            <p>© 2023 Swetha Krishnan. All Rights Reserved.</p>
+          </footer>
+        </div>
+      </div>
+    </>
   );
 }
 

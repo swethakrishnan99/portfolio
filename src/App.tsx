@@ -6,8 +6,7 @@ import CustomCursor from "./components/CustomCursor";
 
 function App() {
   return (
-    <div className="App relative">
-      {/* <CustomCursor /> */}
+    <div className="App relative bg-black">
       <Home />
     </div>
   );

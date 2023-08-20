@@ -22,25 +22,26 @@ function Skills() {
   return (
     <div
       id="skills"
-      className="w-full font-poppins overflow-hidden text-[#010101] bg-[#fff] pt-20 pb-10 flex flex-col justify-center items-center "
+      className="w-full font-roboto overflow-hidden pt-10 xl:!pb-10 pb-5 flex flex-col justify-center items-center z-50"
     >
-      <h5 className="text-center py-5 border-b-[1px] w-full">
-        <span className="font-poppins md:!text-3xl text-2xl text-[#854fee] font-semibold text-left">
+      <h5 className="text-center xl:!py-5 w-full">
+        <span className="font-vidaloka text-[#E5E3E3] md:!text-3xl text-2xl text-left">
+          {/* I’M FAMIL with */}
           SKILLS
         </span>
       </h5>
-      <div className="px-10 max-w-[1500px] flex justify-center">
-        <div className="rounded-3xl py-10 flex flex-col justify-center max-w-[1000px]">
-          <div className="flex flex-wrap gap-2 justify-center py-5">
-            <div className="bg-[#F9F9fd] text-[#6f6f6f] w-[180px] h-[70px] flex justify-center items-center gap-2 rounded-lg">
+      <div className="xl:!py-10 py-3 px-10 md:!px-20 flex justify-center">
+        <div className="rounded-3xl sm:!py-10 py-2 flex flex-col justify-center max-w-[1000px] z-50">
+          <div className="flex flex-wrap gap-5 justify-center py-5">
+            <div className="bg-gradient-to-b from-[#162AB0]/80 to-black hover:bg-gradient-to-t text-[#E5E3E3] w-[180px] h-[70px] flex justify-center items-center gap-2 rounded-lg">
               HTML
               <img src={html} alt="HTML5" className="w-[60px] h-[60px]" />
             </div>
-            <div className="bg-[#F9F9fd] text-[#6f6f6f] w-[180px] h-[70px] flex justify-center items-center gap-2 rounded-lg">
+            <div className="bg-gradient-to-b from-[#162AB0]/80 to-black hover:bg-gradient-to-t text-[#E5E3E3] w-[180px] h-[70px] flex justify-center items-center gap-2 rounded-lg">
               CSS
               <img src={css} alt="CSS3" className="w-[60px] h-[60px]" />
             </div>
-            <div className="bg-[#F9F9fd] text-[#6f6f6f] w-[180px] h-[70px] flex justify-center items-center gap-2 rounded-lg">
+            <div className="bg-gradient-to-b from-[#162AB0]/80 to-black hover:bg-gradient-to-t text-[#E5E3E3] w-[180px] h-[70px] flex justify-center items-center gap-2 rounded-lg">
               JavaScript
               <img
                 src={javascript}
@@ -48,7 +49,7 @@ function Skills() {
                 className="w-[60px] h-[60px]"
               />
             </div>
-            <div className="bg-[#F9F9fd] text-[#6f6f6f] w-[180px] h-[70px] flex justify-center items-center gap-2 rounded-lg">
+            <div className="bg-gradient-to-b from-[#162AB0]/80 to-black hover:bg-gradient-to-t text-[#E5E3E3]/80 w-[180px] h-[70px] flex justify-center items-center gap-2 rounded-lg">
               Bootstrap
               <img
                 src={bootstrap}
@@ -56,7 +57,7 @@ function Skills() {
                 className="w-[60px] h-[60px]"
               />
             </div>
-            <div className="bg-[#F9F9fd] text-[#6f6f6f] w-[180px] h-[70px] flex justify-center items-center gap-2 rounded-lg">
+            <div className="bg-gradient-to-b from-[#162AB0]/80 to-black hover:bg-gradient-to-t text-[#E5E3E3]/80 w-[180px] h-[70px] flex justify-center items-center gap-2 rounded-lg">
               WordPress
               <img
                 src={wordpress}
@@ -64,11 +65,11 @@ function Skills() {
                 className="w-[60px] h-[60px]"
               />
             </div>
-            <div className="bg-[#F9F9fd] text-[#6f6f6f] w-[180px] h-[70px] flex justify-center items-center gap-2 rounded-lg">
+            <div className="bg-gradient-to-b from-[#162AB0]/80 to-black hover:bg-gradient-to-t text-[#E5E3E3]/80 w-[180px] h-[70px] flex justify-center items-center gap-2 rounded-lg">
               Ant-Design
               <img src={antd} alt="Ant-Design" className="w-[60px] h-[60px]" />
             </div>
-            <div className="bg-[#F9F9fd] text-[#6f6f6f] w-[180px] h-[70px] flex justify-center items-center gap-2 rounded-lg">
+            <div className="bg-gradient-to-b from-[#162AB0]/80 to-black hover:bg-gradient-to-t text-[#E5E3E3]/80 w-[180px] h-[70px] flex justify-center items-center gap-2 rounded-lg">
               tailwind css
               <img
                 src={tailwind}
@@ -76,24 +77,24 @@ function Skills() {
                 className="w-[60px] h-[60px]"
               />
             </div>
-            <div className="bg-[#F9F9fd] text-[#6f6f6f] w-[180px] h-[70px] flex justify-center items-center gap-2 rounded-lg">
+            <div className="bg-gradient-to-b from-[#162AB0]/80 to-black hover:bg-gradient-to-t text-[#E5E3E3]/80 w-[180px] h-[70px] flex justify-center items-center gap-2 rounded-lg">
               React
               <img src={react} alt="React" className="w-[60px] h-[60px]" />
             </div>
-            <div className="bg-[#F9F9fd] text-[#6f6f6f] w-[180px] h-[70px] flex justify-center items-center gap-2 rounded-lg">
+            <div className="bg-gradient-to-b from-[#162AB0]/80 to-black hover:bg-gradient-to-t text-[#E5E3E3]/80 w-[180px] h-[70px] flex justify-center items-center gap-2 rounded-lg">
               Redux
               <img src={redux} alt="Redux" className="w-[60px] h-[60px]" />
             </div>
-            <div className="bg-[#F9F9fd] text-[#6f6f6f] w-[180px] h-[70px] flex justify-center items-center gap-2 rounded-lg">
+            <div className="bg-gradient-to-b from-[#162AB0]/80 to-black hover:bg-gradient-to-t text-[#E5E3E3]/80 w-[180px] h-[70px] flex justify-center items-center gap-2 rounded-lg">
               Git
               <img src={git} alt="Git" className="w-[60px] h-[60px]" />
             </div>
 
-            <div className="bg-[#F9F9fd] text-[#6f6f6f] w-[180px] h-[70px] flex justify-center items-center gap-2 rounded-lg">
+            <div className="bg-gradient-to-b from-[#162AB0]/80 to-black hover:bg-gradient-to-t text-[#E5E3E3]/80 w-[180px] h-[70px] flex justify-center items-center gap-2 rounded-lg">
               jQuery
               <img src={jQuery} alt="jQuery" className="w-[60px] h-[60px]" />
             </div>
-            <div className="bg-[#F9F9fd] text-[#6f6f6f] w-[180px] h-[70px] flex justify-center items-center gap-2 rounded-lg">
+            <div className="bg-gradient-to-b from-[#162AB0]/80 to-black hover:bg-gradient-to-t text-[#E5E3E3]/80 w-[180px] h-[70px] flex justify-center items-center gap-2 rounded-lg">
               Responsive Design
               <img
                 src={responsivedesign}
@@ -101,11 +102,11 @@ function Skills() {
                 className="w-[60px] h-[60px]"
               />
             </div>
-            <div className="bg-[#F9F9fd] text-[#6f6f6f] w-[180px] h-[70px] flex justify-center items-center gap-2 rounded-lg">
+            <div className="bg-gradient-to-b from-[#162AB0]/80 to-black hover:bg-gradient-to-t text-[#E5E3E3]/80 w-[180px] h-[70px] flex justify-center items-center gap-2 rounded-lg">
               SASS
               <img src={sass} alt="SASS" className="w-[60px] h-[60px]" />
             </div>
-            <div className="bg-[#F9F9fd] text-[#6f6f6f] w-[180px] h-[70px] flex justify-center items-center gap-2 rounded-lg">
+            <div className="bg-gradient-to-b from-[#162AB0]/80 to-black hover:bg-gradient-to-t text-[#E5E3E3]/80 w-[180px] h-[70px] flex justify-center items-center gap-2 rounded-lg">
               NodeJS
               <img src={nodejs} alt="NodeJS" className="w-[60px] h-[60px]" />
             </div>
@@ -117,7 +118,7 @@ function Skills() {
               FTP
               <img src={FTP} alt="FTP" className="w-[60px] h-[60px]" />
             </div> */}
-            <div className="bg-[#F9F9fd] text-[#6f6f6f] w-[180px] h-[70px] flex justify-center items-center gap-2 rounded-lg">
+            <div className="bg-gradient-to-b from-[#162AB0]/80 to-black hover:bg-gradient-to-t text-[#E5E3E3]/80 w-[180px] h-[70px] flex justify-center items-center gap-2 rounded-lg">
               MongoDB
               <img src={MongoDB} alt="MongoDB" className="w-[60px] h-[60px]" />
             </div>
