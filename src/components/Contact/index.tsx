@@ -19,16 +19,18 @@ function Contact() {
   useEffect(() => {
     if (data && data.name && data.email) {
       let nameCheck = validateName(data.name);
-      console.log(nameCheck);
-      let emailCheck = validateEmail(data.email);
-      if (!nameCheck && !emailCheck) {
-        setMessage("Please enter a valid name and email address");
-      } else if (!nameCheck) {
+      // let emailCheck = validateEmail(data.email);
+      // if (!nameCheck && !emailCheck) {
+      //   setMessage("Please enter a valid name and email address");
+      // }
+      if (!nameCheck) {
         setMessage("Please enter a valid name");
-        console.log(nameCheck);
-      } else if (!emailCheck) {
-        setMessage("Please enter a valid email address");
-      } else {
+        // console.log(nameCheck);
+      }
+      // else if (!emailCheck) {
+      //   setMessage("Please enter a valid email address");
+      // }
+      else {
         setMessage("");
         sendMessage(
           data?.name,
@@ -45,14 +47,14 @@ function Contact() {
     else return false;
   }
 
-  function validateEmail(emailAdress: string) {
-    const emailRegex = new RegExp(
-      /^[A-Za-z0-9_!#$%&'*+\/=?`{|}~^.-]+@[A-Za-z0-9.-]+$/,
-      "gm"
-    );
-    if (emailRegex.test(emailAdress)) return true;
-    else return false;
-  }
+  // function validateEmail(emailAdress: string) {
+  //   const emailRegex = new RegExp(
+  //     /^[A-Za-z0-9_!#$%&'*+\/=?`{|}~^.-]+@[A-Za-z0-9.-]+$/,
+  //     "gm"
+  //   );
+  //   if (emailRegex.test(emailAdress)) return true;
+  //   else return false;
+  // }
 
   return (
     <div id="contact" className="relative w-full min-h-[500px] z-50">
