@@ -3,9 +3,9 @@ import { getDatabase, ref, set } from "firebase/database";
 import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
-  apiKey: process.env.API_KEY,
+  apiKey: "AIzaSyBHqUqsZZh9FDCawPdyFZcgMH4DvtRwCts",
   authDomain: "fdaagg-25c56.firebaseapp.com",
-  databaseURL: process.env.DATABASE_URL,
+  databaseURL: "https://fdaagg-25c56-default-rtdb.firebaseio.com",
   projectId: "fdaagg-25c56",
   storageBucket: "fdaagg-25c56.appspot.com",
   messagingSenderId: "439809849960",
@@ -15,7 +15,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+getAnalytics(app);
 export const sendMessage = (
   name: string,
   email: string,
